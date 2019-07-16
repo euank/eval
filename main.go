@@ -37,7 +37,7 @@ func main() {
 			return
 		}
 
-		ctx, cancel := context.WithTimeout(req.Context(), 3*time.Second)
+		ctx, cancel := context.WithTimeout(req.Context(), 20*time.Second)
 		defer cancel()
 		env, err := startEnv(ctx, e.Env)
 		if err != nil {
